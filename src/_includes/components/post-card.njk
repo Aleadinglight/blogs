@@ -1,0 +1,32 @@
+<article class="post-card">
+  <div class="post-content">
+    {% if post.category %}
+    <div class="post-category">
+      Published in <a href="{{ post.category.url }}">{{ post.category.name }}</a>
+    </div>
+    {% endif %}
+    
+    <h2 class="post-title">
+      <a href="/posts/{{ post.slug }}/">{{ post.title }}</a>
+    </h2>
+    
+    <p class="post-excerpt">{{ post.excerpt }}</p>
+    
+    <div class="post-meta">
+      <span class="post-date">{{ post.date | readableDate }}</span>
+      <span class="post-views">{{ post.views }}</span>
+      <span class="post-comments">{{ post.comments }}</span>
+      <button class="save-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5A2,2 0 0,0 17,3Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  {% if post.imageUrl %}
+  <div class="post-image">
+    <img src="{{ post.imageUrl }}" alt="{{ post.title }}">
+  </div>
+  {% endif %}
+</article>

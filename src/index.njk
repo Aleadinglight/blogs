@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<div class="profile-container">
+  <div class="content-column">
+    <div class="profile-nav">
+      <a href="/" class="active">Home</a>
+      <a href="/about/">About</a>
+    </div>
+    
+    <div class="posts-list">
+      {% for post in posts %}
+        {% include "components/post-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+  
+  <aside class="sidebar">
+    {% include "components/author-info.njk" %}
+  </aside>
+</div>

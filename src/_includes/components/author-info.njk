@@ -1,0 +1,31 @@
+<div class="author-profile">
+  <div class="author-header">
+    <div class="author-name-section">
+      <h1 class="author-name">{{ author.name }}</h1>
+    </div>
+    <div class="author-avatar">
+      <img src="{{ author.avatarUrl }}" alt="{{ author.name }}">
+    </div>
+  </div>
+  
+  <div class="author-details">
+    <h2 class="author-name-mobile">{{ author.name }}</h2>
+    <p class="followers">{{ author.followers }} Followers</p>
+    <p class="bio">{{ author.bio }}</p>
+    
+    <div class="author-actions">
+      <button class="btn follow-btn">Follow</button>
+      <button class="btn email-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <div class="following-section">
+    <h3>Following</h3>
+    <!-- This would be dynamically populated with followers -->
+    <p class="see-all">See all (929)</p>
+  </div>
+</div>

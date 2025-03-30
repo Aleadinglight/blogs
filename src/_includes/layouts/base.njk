@@ -1,12 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-  </head>
-  <body>
-    <p>Based</p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} - {% endif %}{{ author.name }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  {% include "components/header.njk" %}
+  
+  <main class="container">
     {{ content | safe }}
-  </body>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© {{ author.name }} {{ page.date.getFullYear() }}</p>
+    </div>
+  </footer>
+</body>
 </html>

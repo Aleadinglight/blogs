@@ -1,0 +1,37 @@
+[
+  {
+    "title": "How the heck do I use Eleventy? The intro guide I wish I had",
+    "excerpt": "If you're like me, you've heard a lot about Eleventy, a static site generator that's been praised by a lot of really awesome people...",
+    "date": "2020-09-02",
+    "views": 160,
+    "comments": 3,
+    "imageUrl": "/assets/images/post1.jpg",
+    "category": {
+      "name": "Design at Meta",
+      "url": "#"
+    },
+    "slug": "how-to-use-eleventy"
+  },
+  {
+    "title": "Photographing Diverse Hands at Facebook",
+    "excerpt": "This is the story of how we came to create and distribute the Diverse Device Hands we recently launched as part of the...",
+    "date": "2015-10-08",
+    "views": 887,
+    "comments": 11,
+    "imageUrl": "/assets/images/post2.jpg",
+    "category": {
+      "name": "Design at Meta",
+      "url": "#"
+    },
+    "slug": "photographing-diverse-hands"
+  },
+  {
+    "title": "A Month Designing in VR",
+    "excerpt": "In April I spent a few weeks designing for the Samsung Gear VR. I wanted to share some thoughts on why I did a hack-a-month...",
+    "date": "2015-06-24",
+    "views": 839,
+    "comments": 8,
+    "imageUrl": "/assets/images/post3.jpg",
+    "slug": "month-designing-vr"
+  }
+]
