@@ -1,3 +1,4 @@
+<!-- src/_includes/layouts/base.njk -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,173 +7,152 @@
   <title>Home - Citizen Mammoth</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-  <header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="/" class="logo">Citizen Mammoth</a>
+<body class="font-sans text-gray-900 bg-white">
+  <!-- src/_includes/components/header.njk -->
+<header class="py-4 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="font-bold text-2xl">Citizen Mammoth</a>
       
-      <div class="search">
-        <input type="text" placeholder="Search">
+      <div class="hidden md:block">
+        <input type="text" placeholder="Search" class="bg-gray-100 px-4 py-2 rounded-full text-sm w-48">
       </div>
       
-      <div class="header-right">
-        <a href="#" class="write-link">Write</a>
-        <a href="#" class="btn btn-signup">Sign up</a>
-        <a href="#" class="btn btn-signin">Sign in</a>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm hidden md:inline">About</a>
+        <a href="#" class="text-sm hidden md:inline">Bla bla</a>
+        <a href="#" class="text-sm md:inline">More</a>
       </div>
     </div>
   </div>
 </header>
   
-  <main class="container">
+  <main class="max-w-6xl mx-auto px-4">
     
-<div class="profile-container">
-  <div class="content-column">
-    <div class="profile-nav">
-      <a href="/" class="active">Home</a>
-      <a href="/about/">About</a>
-    </div>
+<div class="grid md:grid-cols-3 gap-10 mt-10">
+  <div class="md:col-span-2">
     
-    <div class="posts-list">
+    <div>
       
-        <article class="post-card">
-  <div class="post-content">
+        <!-- src/_includes/components/post-card.njk -->
+<article class="grid md:grid-cols-4 gap-5 mb-10 pb-10 border-b border-gray-200">
+  <div class="col-span-3">
     
-    <div class="post-category">
-      Published in <a href="#">Design at Meta</a>
+    <div class="text-sm text-gray-600 mb-2">
+      Published in <a href="#" class="hover:underline">Design at Meta</a>
     </div>
     
     
-    <h2 class="post-title">
-      <a href="/posts/how-to-use-eleventy/">How the heck do I use Eleventy? The intro guide I wish I had</a>
+    <h2 class="text-xl md:text-2xl font-bold mb-2">
+      <a href="/posts/how-to-use-eleventy/" class="hover:underline">How the heck do I use Eleventy? The intro guide I wish I had</a>
     </h2>
     
-    <p class="post-excerpt">If you&#39;re like me, you&#39;ve heard a lot about Eleventy, a static site generator that&#39;s been praised by a lot of really awesome people...</p>
+    <p class="text-gray-600 mb-3">If you&#39;re like me, you&#39;ve heard a lot about Eleventy, a static site generator that&#39;s been praised by a lot of really awesome people...</p>
     
-    <div class="post-meta">
-      <span class="post-date">Sep 2, 2020</span>
-      <span class="post-views">160</span>
-      <span class="post-comments">3</span>
-      <button class="save-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5A2,2 0 0,0 17,3Z"></path>
-        </svg>
-      </button>
+    <div class="flex items-center gap-4 text-sm text-gray-600">
+      <span>Sep 2, 2020</span>
+      <span>160</span>
+      <span>3</span>
     </div>
   </div>
   
   
-  <div class="post-image">
-    <img src="/assets/images/post1.jpg" alt="How the heck do I use Eleventy? The intro guide I wish I had">
+  <div class="col-span-1 order-first md:order-last">
+    <img src="/assets/images/post1.jpg" alt="How the heck do I use Eleventy? The intro guide I wish I had" class="w-full h-32 md:h-full object-cover rounded">
   </div>
   
 </article>
       
-        <article class="post-card">
-  <div class="post-content">
+        <!-- src/_includes/components/post-card.njk -->
+<article class="grid md:grid-cols-4 gap-5 mb-10 pb-10 border-b border-gray-200">
+  <div class="col-span-3">
     
-    <div class="post-category">
-      Published in <a href="#">Design at Meta</a>
+    <div class="text-sm text-gray-600 mb-2">
+      Published in <a href="#" class="hover:underline">Design at Meta</a>
     </div>
     
     
-    <h2 class="post-title">
-      <a href="/posts/photographing-diverse-hands/">Photographing Diverse Hands at Facebook</a>
+    <h2 class="text-xl md:text-2xl font-bold mb-2">
+      <a href="/posts/photographing-diverse-hands/" class="hover:underline">Photographing Diverse Hands at Facebook</a>
     </h2>
     
-    <p class="post-excerpt">This is the story of how we came to create and distribute the Diverse Device Hands we recently launched as part of the...</p>
+    <p class="text-gray-600 mb-3">This is the story of how we came to create and distribute the Diverse Device Hands we recently launched as part of the...</p>
     
-    <div class="post-meta">
-      <span class="post-date">Oct 8, 2015</span>
-      <span class="post-views">887</span>
-      <span class="post-comments">11</span>
-      <button class="save-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5A2,2 0 0,0 17,3Z"></path>
-        </svg>
-      </button>
+    <div class="flex items-center gap-4 text-sm text-gray-600">
+      <span>Oct 8, 2015</span>
+      <span>887</span>
+      <span>11</span>
     </div>
   </div>
   
-  
-  <div class="post-image">
-    <img src="/assets/images/post2.jpg" alt="Photographing Diverse Hands at Facebook">
-  </div>
   
 </article>
       
-        <article class="post-card">
-  <div class="post-content">
+        <!-- src/_includes/components/post-card.njk -->
+<article class="grid md:grid-cols-4 gap-5 mb-10 pb-10 border-b border-gray-200">
+  <div class="col-span-3">
     
     
-    <h2 class="post-title">
-      <a href="/posts/month-designing-vr/">A Month Designing in VR</a>
+    <h2 class="text-xl md:text-2xl font-bold mb-2">
+      <a href="/posts/month-designing-vr/" class="hover:underline">A Month Designing in VR</a>
     </h2>
     
-    <p class="post-excerpt">In April I spent a few weeks designing for the Samsung Gear VR. I wanted to share some thoughts on why I did a hack-a-month...</p>
+    <p class="text-gray-600 mb-3">In April I spent a few weeks designing for the Samsung Gear VR. I wanted to share some thoughts on why I did a hack-a-month...</p>
     
-    <div class="post-meta">
-      <span class="post-date">Jun 24, 2015</span>
-      <span class="post-views">839</span>
-      <span class="post-comments">8</span>
-      <button class="save-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5A2,2 0 0,0 17,3Z"></path>
-        </svg>
-      </button>
+    <div class="flex items-center gap-4 text-sm text-gray-600">
+      <span>Jun 24, 2015</span>
+      <span>839</span>
+      <span>8</span>
     </div>
   </div>
   
-  
-  <div class="post-image">
-    <img src="/assets/images/post3.jpg" alt="A Month Designing in VR">
-  </div>
   
 </article>
       
     </div>
   </div>
   
-  <aside class="sidebar">
-    <div class="author-profile">
-  <div class="author-header">
-    <div class="author-name-section">
-      <h1 class="author-name">Citizen Mammoth</h1>
+  <aside class="md:col-span-1 hidden md:block">
+    <!-- src/_includes/components/author-info.njk -->
+<div class="sticky top-8">
+  <div class="mb-8">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h1 class="text-2xl font-bold">Citizen Mammoth</h1>
+      </div>
+      <div>
+        <img src="/assets/images/profile.jpg" alt="Citizen Mammoth" class="w-16 h-16 rounded-full object-cover">
+      </div>
     </div>
-    <div class="author-avatar">
-      <img src="/assets/images/profile.jpg" alt="Citizen Mammoth">
-    </div>
-  </div>
-  
-  <div class="author-details">
-    <h2 class="author-name-mobile">Citizen Mammoth</h2>
-    <p class="followers"> Followers</p>
-    <p class="bio">First, we take Manhattan, then we take Berlin.</p>
     
-    <div class="author-actions">
-      <button class="btn follow-btn">Follow</button>
-      <button class="btn email-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
-        </svg>
-      </button>
+    <div>
+      <h2 class="text-2xl font-bold md:hidden mb-2">Citizen Mammoth</h2>
+      <p class="text-gray-600 mb-4">First, we take Manhattan, then we take Berlin.</p>
+      
+      <div class="flex gap-2 mb-8">
+        <button class="bg-gray-300 font-bold py-2 px-4 rounded text-gray-800 text-sm">Follow</button>
+        <button class="border border-gray-300 p-2 rounded">
+          <svg width="24" height="24" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
   
-  <div class="following-section">
-    <h3>Following</h3>
+  <div>
+    <h3 class="font-bold mb-4">Placeholder</h3>
     <!-- This would be dynamically populated with followers -->
-    <p class="see-all">See all (929)</p>
+    <p class="text-sm text-gray-600">See all (929)</p>
   </div>
 </div>
   </aside>
 </div>
   </main>
   
-  <footer class="footer">
-    <div class="container">
-      <p>© Citizen Mammoth 2025</p>
+  <footer class="py-6 mt-12 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-gray-600 text-sm">© Citizen Mammoth 2025</p>
     </div>
   </footer>
 </body>

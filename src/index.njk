@@ -3,21 +3,17 @@ layout: layouts/base.njk
 title: Home
 ---
 
-<div class="profile-container">
-  <div class="content-column">
-    <div class="profile-nav">
-      <a href="/" class="active">Home</a>
-      <a href="/about/">About</a>
-    </div>
+<div class="grid md:grid-cols-3 gap-10 mt-10">
+  <div class="md:col-span-2">
     
-    <div class="posts-list">
+    <div>
       {% for post in posts %}
         {% include "components/post-card.njk" %}
       {% endfor %}
     </div>
   </div>
   
-  <aside class="sidebar">
+  <aside class="md:col-span-1 hidden md:block">
     {% include "components/author-info.njk" %}
   </aside>
 </div>

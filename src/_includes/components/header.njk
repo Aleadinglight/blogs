@@ -1,16 +1,17 @@
-<header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <a href="/" class="logo">Citizen Mammoth</a>
+<!-- src/_includes/components/header.njk -->
+<header class="py-4 border-b border-gray-200">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="font-bold text-2xl">Citizen Mammoth</a>
       
-      <div class="search">
-        <input type="text" placeholder="Search">
+      <div class="hidden md:block">
+        <input type="text" placeholder="Search" class="bg-gray-100 px-4 py-2 rounded-full text-sm w-48">
       </div>
       
-      <div class="header-right">
-        <a href="#" class="write-link">Write</a>
-        <a href="#" class="btn btn-signup">Sign up</a>
-        <a href="#" class="btn btn-signin">Sign in</a>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm hidden md:inline">About</a>
+        <a href="#" class="text-sm hidden md:inline">Bla bla</a>
+        <a href="#" class="text-sm md:inline">More</a>
       </div>
     </div>
   </div>

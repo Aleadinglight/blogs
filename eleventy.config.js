@@ -5,7 +5,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.setLayoutResolution(false);
 
   // Copy assets to the output
-  eleventyConfig.addPassthroughCopy("src/css");
+  // eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");
 
   // Custom date filter

@@ -1,3 +1,4 @@
+<!-- src/_includes/layouts/base.njk -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,16 +7,16 @@
   <title>{% if title %}{{ title }} - {% endif %}{{ author.name }}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="font-sans text-gray-900 bg-white">
   {% include "components/header.njk" %}
   
-  <main class="container">
+  <main class="max-w-6xl mx-auto px-4">
     {{ content | safe }}
   </main>
   
-  <footer class="footer">
-    <div class="container">
-      <p>© {{ author.name }} {{ page.date.getFullYear() }}</p>
+  <footer class="py-6 mt-12 border-t border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <p class="text-gray-600 text-sm">© {{ author.name }} {{ page.date.getFullYear() }}</p>
     </div>
   </footer>
 </body>

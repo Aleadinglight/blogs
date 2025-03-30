@@ -1,31 +1,33 @@
-<div class="author-profile">
-  <div class="author-header">
-    <div class="author-name-section">
-      <h1 class="author-name">{{ author.name }}</h1>
+<!-- src/_includes/components/author-info.njk -->
+<div class="sticky top-8">
+  <div class="mb-8">
+    <div class="flex justify-between items-start mb-4">
+      <div>
+        <h1 class="text-2xl font-bold">{{ author.name }}</h1>
+      </div>
+      <div>
+        <img src="{{ author.avatarUrl }}" alt="{{ author.name }}" class="w-16 h-16 rounded-full object-cover">
+      </div>
     </div>
-    <div class="author-avatar">
-      <img src="{{ author.avatarUrl }}" alt="{{ author.name }}">
-    </div>
-  </div>
-  
-  <div class="author-details">
-    <h2 class="author-name-mobile">{{ author.name }}</h2>
-    <p class="followers">{{ author.followers }} Followers</p>
-    <p class="bio">{{ author.bio }}</p>
     
-    <div class="author-actions">
-      <button class="btn follow-btn">Follow</button>
-      <button class="btn email-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
-        </svg>
-      </button>
+    <div>
+      <h2 class="text-2xl font-bold md:hidden mb-2">{{ author.name }}</h2>
+      <p class="text-gray-600 mb-4">{{ author.bio }}</p>
+      
+      <div class="flex gap-2 mb-8">
+        <button class="bg-gray-300 font-bold py-2 px-4 rounded text-gray-800 text-sm">Follow</button>
+        <button class="border border-gray-300 p-2 rounded">
+          <svg width="24" height="24" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
   
-  <div class="following-section">
-    <h3>Following</h3>
+  <div>
+    <h3 class="font-bold mb-4">Placeholder</h3>
     <!-- This would be dynamically populated with followers -->
-    <p class="see-all">See all (929)</p>
+    <p class="text-sm text-gray-600">See all (929)</p>
   </div>
 </div>

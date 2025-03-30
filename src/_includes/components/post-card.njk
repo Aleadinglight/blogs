@@ -1,32 +1,28 @@
-<article class="post-card">
-  <div class="post-content">
+<!-- src/_includes/components/post-card.njk -->
+<article class="grid md:grid-cols-4 gap-5 mb-10 pb-10 border-b border-gray-200">
+  <div class="col-span-3">
     {% if post.category %}
-    <div class="post-category">
-      Published in <a href="{{ post.category.url }}">{{ post.category.name }}</a>
+    <div class="text-sm text-gray-600 mb-2">
+      Published in <a href="{{ post.category.url }}" class="hover:underline">{{ post.category.name }}</a>
     </div>
     {% endif %}
     
-    <h2 class="post-title">
-      <a href="/posts/{{ post.slug }}/">{{ post.title }}</a>
+    <h2 class="text-xl md:text-2xl font-bold mb-2">
+      <a href="/posts/{{ post.slug }}/" class="hover:underline">{{ post.title }}</a>
     </h2>
     
-    <p class="post-excerpt">{{ post.excerpt }}</p>
+    <p class="text-gray-600 mb-3">{{ post.excerpt }}</p>
     
-    <div class="post-meta">
-      <span class="post-date">{{ post.date | readableDate }}</span>
-      <span class="post-views">{{ post.views }}</span>
-      <span class="post-comments">{{ post.comments }}</span>
-      <button class="save-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d="M17,3H7A2,2 0 0,0 5,5V21L12,18L19,21V5A2,2 0 0,0 17,3Z"></path>
-        </svg>
-      </button>
+    <div class="flex items-center gap-4 text-sm text-gray-600">
+      <span>{{ post.date | readableDate }}</span>
+      <span>{{ post.views }}</span>
+      <span>{{ post.comments }}</span>
     </div>
   </div>
   
   {% if post.imageUrl %}
-  <div class="post-image">
-    <img src="{{ post.imageUrl }}" alt="{{ post.title }}">
+  <div class="col-span-1 order-first md:order-last">
+    <img src="{{ post.imageUrl }}" alt="{{ post.title }}" class="w-full h-32 md:h-full object-cover rounded">
   </div>
   {% endif %}
 </article>
