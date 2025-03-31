@@ -3,17 +3,37 @@ layout: layouts/base.njk
 title: Home
 ---
 
-<div class="grid md:grid-cols-3 gap-10 mt-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
   <div class="md:col-span-2">
-    
-    <div>
-      {% for post in posts %}
+    <h1 class="font-bold mb-6 text-slate-500">LATEST POSTS</h1>
+    <div class="md:col-span-2">
+      {% for post in collections.posts %}
         {% include "components/post-card.njk" %}
       {% endfor %}
     </div>
   </div>
   
-  <aside class="md:col-span-1 hidden md:block">
+  <!-- Author info for mobile at the top -->
+  <div class="md:hidden mb-8">
+    <div class="flex items-center gap-4 mb-4">
+      <img src="{{ author.avatarUrl }}" alt="{{ author.name }}" class="w-12 h-12 rounded-full object-cover">
+      <div>
+        <h2 class="font-bold">{{ author.name }}</h2>
+        <p class="text-sm text-gray-600">{{ author.followers }} Followers</p>
+      </div>
+    </div>
+    <div class="flex gap-2 mb-4">
+      <button class="bg-gray-300 text-gray-800 px-4 py-2 rounded text-sm">Follow</button>
+      <button class="border border-gray-300 p-2 rounded-full">
+        <svg width="20" height="20" viewBox="0 0 24 24" class="w-5 h-5">
+          <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  
+  <!-- Author info for desktop in sidebar -->
+  <aside class="hidden md:block md:col-span-1">
     {% include "components/author-info.njk" %}
   </aside>
 </div>

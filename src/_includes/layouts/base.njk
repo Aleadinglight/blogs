@@ -1,22 +1,23 @@
-<!-- src/_includes/layouts/base.njk -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if title %}{{ title }} - {% endif %}{{ author.name }}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body class="font-sans text-gray-900 bg-white">
+<body class="font-sans text-gray-900 bg-gray-50  flex flex-col min-h-screen">
   {% include "components/header.njk" %}
   
-  <main class="max-w-6xl mx-auto px-4">
-    {{ content | safe }}
+  <main class="w-full flex-grow px-4 sm:px-6 lg:px-8 py-8">
+    <div class="max-w-6xl mx-auto">
+      {{ content | safe }}
+    </div>
   </main>
-  
-  <footer class="py-6 mt-12 border-t border-gray-200">
-    <div class="max-w-6xl mx-auto px-4">
-      <p class="text-gray-600 text-sm">© {{ author.name }} {{ page.date.getFullYear() }}</p>
+
+  <footer class="py-3 sm:py-4 border-t border-gray-200 w-full mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-gray-600 text-sm text-center sm:text-left">© {{ author.name }} {{ page.date.getFullYear() }}</p>
     </div>
   </footer>
 </body>

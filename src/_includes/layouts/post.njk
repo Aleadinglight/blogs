@@ -1,15 +1,29 @@
 ---
-title: My Rad Blog
+layout: layouts/base.njk
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-  </head>
-  <body>
+<div class="grid md:grid-cols-3 gap-10 mt-10">
+  <article class="md:col-span-2 prose lg:prose-xl">
+    <h1>{{ title }}</h1>
+    
+    <div class="text-gray-600 mb-8">
+      <time datetime="{{ page.date | dateIso }}">{{ page.date | readableDate }}</time>
+    </div>
+    
     {{ content | safe }}
-  </body>
-</html>
+    
+    {% if tags %}
+    <div class="mt-8">
+      {% for tag in tags %}
+        {% if tag != "post" %}
+        <a href="/tags/{{ tag }}" class="mr-2 px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">#{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article>
+  
+  <aside class="md:col-span-1 hidden md:block">
+    {% include "components/author-info.njk" %}
+  </aside>
+</div>
